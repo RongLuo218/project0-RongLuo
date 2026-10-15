@@ -57,7 +57,7 @@ window.HEADPHONE_FACTS = [
     parts: [],
     title: "Green is not enough",
     fact: "Solar charging makes a headphone sustainable even when its battery cannot be replaced, because renewable energy matters more than repair.",
-    modelFact: "Fairbuds XL and some Sony headphone models offer selected replacement parts, such as ear pads or batteries, so users may repair one part instead of replacing the whole product.",
+    modelFact: "Fairbuds XL and some Sony headphone models offer selected replacement parts, such as ear pads or batteries, so users may repair one part instead of replacing the whole product. After seeing these parts, what do you think makes a headphone truly sustainable?",
     sourcePlacement: "model",
     sources: [
       { title: "Fairbuds XL spare parts", url: "https://www.fairphone.com/shop/category/spare-parts-fairbuds-xl-2023-186" },

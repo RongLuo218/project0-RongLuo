@@ -1,0 +1,353 @@
+/* TV opening */
+.site-header {
+  padding-top: clamp(1.55rem, 3vw, 2.25rem);
+  padding-bottom: 0.3rem;
+}
+
+.site-header h1 {
+  max-width: 62rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(1.55rem, 3.1vw, 2.8rem);
+  text-shadow: 2px 2px 0 rgba(56, 219, 232, 0.32);
+}
+
+.stage-caption,
+.scene-note,
+.lab-label,
+.info-card p {
+  color: #49606a;
+}
+
+body:not(.workbench-mode) .info-card {
+  display: none;
+}
+
+.story-panel {
+  overflow: visible;
+  padding: clamp(1rem, 2vw, 1.35rem) clamp(1rem, 2.4vw, 1.6rem) clamp(1.2rem, 2.6vw, 1.7rem);
+  border: 8px solid #1b252b;
+  border-radius: 26px 26px 38px 38px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 246, 0.94), rgba(199, 214, 211, 0.98)),
+    var(--panel);
+  box-shadow:
+    0 22px 0 #11181d,
+    0 34px 48px rgba(23, 32, 38, 0.28),
+    0 0 0 2px rgba(255, 255, 255, 0.58) inset;
+}
+
+.story-panel::before {
+  content: "";
+  position: absolute;
+  right: clamp(0.7rem, 2vw, 1.3rem);
+  top: clamp(1rem, 2.4vw, 1.55rem);
+  width: clamp(2.4rem, 7vw, 4.6rem);
+  height: clamp(4.8rem, 12vw, 7.6rem);
+  border: 2px solid rgba(23, 32, 38, 0.24);
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 50% 18%, #38dbe8 0 0.42rem, transparent 0.46rem),
+    radial-gradient(circle at 50% 42%, #ffea3a 0 0.36rem, transparent 0.4rem),
+    repeating-linear-gradient(180deg, rgba(23, 32, 38, 0.34) 0 2px, transparent 2px 8px),
+    rgba(255, 255, 255, 0.32);
+  opacity: 0.72;
+  pointer-events: none;
+}
+
+.story-panel::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2.55rem;
+  width: min(16rem, 46%);
+  height: 1.3rem;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: #1b252b;
+  box-shadow: 0 -1.45rem 0 -0.65rem #1b252b;
+  pointer-events: none;
+}
+
+.story-stage {
+  isolation: isolate;
+  height: min(50vh, 450px);
+  min-height: 330px;
+  border: clamp(0.45rem, 1.5vw, 0.78rem) solid #11181d;
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 50% 46%, rgba(56, 219, 232, 0.18), transparent 18rem),
+    linear-gradient(rgba(155, 246, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(155, 246, 255, 0.045) 1px, transparent 1px),
+    #121b23;
+  background-size: auto, 29px 29px, 29px 29px, auto;
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.18),
+    0 0 34px rgba(56, 219, 232, 0.22) inset,
+    0 8px 22px rgba(23, 32, 38, 0.28) inset;
+}
+
+.story-stage::before,
+.story-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: auto;
+  height: auto;
+  border: 0;
+  pointer-events: none;
+  z-index: 4;
+  display: block;
+}
+
+.story-stage::before {
+  background: repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 5px);
+  mix-blend-mode: screen;
+  opacity: 0.55;
+}
+
+.story-stage::after {
+  background: radial-gradient(circle at 34% 10%, rgba(255, 255, 255, 0.18), transparent 18rem);
+  opacity: 0.45;
+}
+
+.story-scene {
+  z-index: 2;
+}
+
+.intro-camera {
+  width: min(520px, 84%);
+  border: 3px solid rgba(23, 32, 38, 0.65);
+  border-radius: 4px;
+  box-shadow: 0 0 0 4px rgba(56, 219, 232, 0.12), 0 0 28px rgba(56, 219, 232, 0.25);
+}
+
+#headphones-alone {
+  gap: clamp(1rem, 2vw, 1.4rem);
+}
+
+.help-screen {
+  display: grid;
+  place-items: center;
+  gap: 0.78rem;
+  text-align: center;
+}
+
+.help-screen .scene-note {
+  margin: 0;
+  max-width: 28rem;
+  font-size: clamp(1.05rem, 2.2vw, 1.45rem);
+  color: #edf8f8;
+  text-shadow: 0 0 12px rgba(56, 219, 232, 0.42);
+}
+
+.choice-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  background: rgba(247, 249, 240, 0.94);
+  border-color: rgba(28, 184, 196, 0.52);
+  box-shadow: 0 16px 32px rgba(23, 32, 38, 0.16);
+}
+
+/* First-screen TV balance */
+.experience {
+  margin-top: 0.55rem;
+}
+
+.choice-actions .scene-action {
+  padding: 0.12rem 0.1rem 0.18rem;
+  border: 0;
+  background: transparent;
+  color: #edf8f8;
+  box-shadow: none;
+  text-decoration: underline;
+  text-underline-offset: 0.26rem;
+  text-decoration-thickness: 1px;
+}
+
+.choice-actions .scene-action:is(:hover, :active) {
+  transform: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.choice-actions .scene-action:hover {
+  color: var(--cyan-soft);
+}
+
+.step-back {
+  position: absolute;
+  left: clamp(1rem, 2vw, 1.4rem);
+  bottom: clamp(0.8rem, 2vw, 1.2rem);
+  z-index: 5;
+  padding: 0.12rem 0.1rem 0.18rem;
+  border: 0;
+  background: transparent;
+  color: #edf8f8;
+  box-shadow: none;
+  text-decoration: underline;
+  text-underline-offset: 0.26rem;
+  text-decoration-thickness: 1px;
+}
+
+.step-back[hidden] {
+  display: none;
+}
+
+.step-back:hover,
+.step-back:active {
+  transform: none;
+  background: transparent;
+  box-shadow: none;
+  color: var(--cyan-soft);
+}
+
+/* Keep footer clear of the TV stand */
+footer {
+  margin-top: 3.8rem;
+}
+/* Story controls, delayed vote, and workbench mode */
+body.workbench-mode .story-controls {
+  display: none !important;
+}
+
+/* Full-screen TV opening and borderless workbench pass */
+body:not(.workbench-mode) {
+  overflow: hidden;
+}
+
+body:not(.workbench-mode) :is(.site-header, footer) {
+  display: none;
+}
+
+body:not(.workbench-mode) .experience {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: stretch;
+}
+
+body:not(.workbench-mode) .story-panel {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: clamp(0.7rem, 1.5vw, 1rem);
+  padding: clamp(0.55rem, 1.4vw, 1.15rem);
+  border-width: clamp(0.55rem, 1.6vw, 1.05rem);
+  border-radius: 0;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.35), inset 0 0 48px rgba(23, 32, 38, 0.24);
+}
+
+body:not(.workbench-mode) .story-panel::before,
+body:not(.workbench-mode) .story-panel::after {
+  display: none;
+}
+
+body:not(.workbench-mode) .story-stage {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  border-width: clamp(0.45rem, 1vw, 0.75rem);
+  border-radius: 18px;
+}
+
+body[data-scene="intro"] .intro-camera {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+body[data-scene="takeoff"] .takeoff-animation {
+  width: min(72vh, 70vw);
+  height: min(72vh, 70vw);
+}
+
+.takeoff-ending {
+  width: min(72vh, 70vw);
+  height: min(72vh, 70vw);
+  object-fit: cover;
+  object-position: 100% 0;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+body[data-scene="headphones-alone"] .help-screen .single-headphones {
+  width: min(46vh, 42vw);
+}
+
+body:not(.workbench-mode) .story-controls {
+  width: auto;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.8rem, 2vw, 1.4rem);
+  margin: 0 auto;
+}
+
+body:not(.workbench-mode) .story-controls button {
+  width: clamp(2.15rem, 3.9vw, 3.25rem) !important;
+  min-width: 0 !important;
+  height: clamp(2.15rem, 3.9vw, 3.25rem);
+  padding: 0;
+  border: 3px solid #11181d;
+  border-radius: 999px;
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+  box-shadow: 0 0.25rem 0 #11181d, 0 0 0 3px rgba(255, 255, 255, 0.42) inset, 0 0 18px rgba(23, 32, 38, 0.12);
+}
+
+#start-story { background: var(--green); }
+#stop-story { background: var(--yellow); }
+#restart-story { background: var(--red); }
+
+body:not(.workbench-mode) .stage-caption,
+body[data-scene="drag-lab"] .stage-caption {
+  display: none;
+}
+
+
+/* Tighter camera crop and larger workbench objects */
+body[data-scene="intro"] .intro-camera img {
+  object-position: 52% 22%;
+  transform: scale(1.04);
+  transform-origin: 52% 22%;
+}
+
+@media (max-width: 700px) {
+  body:not(.workbench-mode) .story-panel {
+    gap: 0.55rem;
+    padding: 0.55rem;
+  }
+
+  body:not(.workbench-mode) .story-stage {
+    border-radius: 12px;
+  }
+
+  body[data-scene="takeoff"] .takeoff-animation {
+    width: min(62vh, 84vw);
+    height: min(62vh, 84vw);
+  }
+
+  .takeoff-ending {
+    width: min(62vh, 84vw);
+    height: min(62vh, 84vw);
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header h1 { font-size: clamp(1.25rem, 5.4vw, 1.75rem); }
+}

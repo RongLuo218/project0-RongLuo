@@ -1,0 +1,126 @@
+.inspection-wrap {
+  transform: translateX(-8%) scale(1.15);
+  transform-origin: center;
+  position: relative;
+  width: 900px;
+  height: 510px;
+}
+
+.inspection-part {
+  position: absolute;
+  left: -10%;
+  top: -10%;
+  width: 120%;
+  height: 120%;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.7s;
+}
+
+#left-earcup.inspection-part {
+  z-index: 8;
+}
+#left-earcup.apart {
+  transform: translate(-100px, 45px);
+}
+
+#battery {
+  z-index: 7;
+}
+#battery.apart {
+  transform: translate(-70px, 20px);
+}
+
+#right-cushion {
+  z-index: 6;
+}
+#right-cushion.apart {
+  transform: translate(-20px, -20px);
+}
+
+#headband {
+  z-index: 5;
+}
+
+#top-cushion{
+  z-index: 4;
+}
+#top-cushion.apart {
+  transform: translate(0px, -70px);
+}
+
+#left-cushion {
+  z-index: 3;
+} 
+#left-cushion.apart {
+  transform: translate(20px, -20px);
+}
+
+#circuit-board{
+  z-index: 2;
+}
+#circuit-board.apart{
+  transform: translate(50px, 30px);
+}
+
+#right-earcup{
+  z-index: 1;
+}
+#right-earcup.apart{
+  transform: translate(100px, 50px);
+}
+
+.vote-panel {
+  padding: clamp(1.5rem, 4vw, 2.6rem);
+  border: 2px solid var(--ink);
+  background: rgba(247, 249, 240, 0.94);
+  box-shadow: 6px 6px 0 rgba(23, 32, 38, 0.2);
+}
+
+.vote-actions {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+#vote-result {
+  min-height: 1.3rem;
+}
+
+body[data-scene="vote-scene"].workbench-mode .experience {
+  width: min(720px, 94vw);
+  grid-template-columns: 1fr;
+}
+
+body[data-scene="vote-scene"] .info-card {
+  display: none;
+}
+
+.vote-scene .vote-screen {
+  width: min(470px, 88vw);
+}
+
+.vote-screen h2 {
+  margin: 0 0 1.4rem;
+  font-family: "Courier New", Consolas, monospace;
+}
+
+#show-repair-examples {
+  margin-top: 0.5rem;
+}
+
+#go-to-vote {
+  margin-top: 0.8rem;
+}
+
+/* Diagnosis panel readability on the light palette */
+.info-card #card-fact,
+.info-card #card-source,
+.info-card #model-output,
+.info-card #vote-result {
+  color: #324952;
+}
+
+.info-card #card-source a {
+  color: #147884;
+}
