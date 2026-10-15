@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>When Headphones Stop Working: Repair or Replace?</title>
+  <link rel="stylesheet" href="style.css?v=20261015-8">
+  <link rel="stylesheet" href="tv.css?v=20261015-7">
+  <link rel="stylesheet" href="workbench.css?v=20261015-7">
+  <link rel="stylesheet" href="inspection.css?v=20261015-7">
+</head>
+
+<body>
+<header class="site-header">
+    <p class="eyebrow">Project 0: Climate & Tech Justice</p>
+    <h1>When Headphones Stop Working: Repair or Replace?</h1>
+  </header>
+
+  <main class="experience">
+    <section class="story-panel" aria-label="Headphone story animation">
+      <div class="story-stage">
+        <section id="intro" class="story-scene active" aria-label="Girl walking with headphones">
+          <div class="intro-camera">
+            <img class="intro-wide" src="assets/girl-walking.png" alt="A girl walking with headphones">
+          </div>
+        </section>
+
+        <section id="takeoff" class="story-scene" aria-label="The girl notices the headphones have stopped working">
+          <img class="takeoff-animation" src="assets/takeoff-spritesheet-clean.png" alt="Sprite animation of the girl becoming sad and taking off headphones">
+        </section>
+
+        <section id="headphones-alone" class="story-scene" aria-label="Help the girl inspect the headphones">
+          <div class="help-screen">
+            <img class="single-headphones" src="assets/only-headphones.png" alt="A pair of headphones by itself">
+            <p class="scene-note">Do you want to help her check what happened?</p>
+            <div class="choice-actions" aria-label="Choose whether to help">
+              <button id="to-repair-table" class="primary-action scene-action">Yes</button>
+              <button id="no-help" class="secondary-action scene-action">No</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="no-help-result" class="story-scene" aria-label="The girl is left holding her broken headphones">
+          <img class="takeoff-ending" src="assets/takeoff-spritesheet-clean.png" alt="The girl looks confused while holding her headphones">
+        </section>
+
+        <section id="drag-lab" class="story-scene lab-scene" aria-label="Move headphones to the repair table">
+          <div class="lab-left">
+            <p class="lab-label">Grab the headphones</p>
+            <img id="drag-headphones" class="drag-headphones" src="assets/only-headphones.png" alt="Draggable headphones">
+          </div>
+          <div id="drop-zone" class="drop-zone" aria-label="Repair table drop zone">
+            <img src="assets/Frame 21.png" alt="Repair table">
+            <span>Repair table</span>
+          </div>
+        </section>
+
+        <section id="bench" class="story-scene bench-scene" aria-label="Headphones on repair table">
+          <img class="bench-image" src="assets/Frame 11.png" alt="Headphones placed on a repair table">
+          <button id="open-inspection" class="primary-action">Open it up</button>
+        </section>
+
+
+
+        <section id="inspection" 
+                 class="story-scene inspection-scene" 
+                 aria-label="Clickable exploded headphone parts">
+          
+          <div id="inspection-wrap" class="inspection-wrap">
+            <img id="headband" class="inspection-part" src="assets/Frame 17.png" alt="Headband part of the headphones" >
+            <img id="right-cushion" class="inspection-part" src="assets/Frame 16.png" alt="Right-cushion part of the headphones">
+            <img id="left-cushion" class="inspection-part" src="assets/Frame 18.png" alt="left-cushion part of the headphones">
+            <img id="circuit-board" class="inspection-part" src="assets/Frame 19.png" alt="circuit board part of the headphones">
+            <img id="left-earcup" class="inspection-part" src="assets/Frame 14.png" alt="left-earcup part of the headphones">
+            <img id="right-earcup" class="inspection-part" src="assets/Frame 20.png" alt="right-earcup part of the headphones">
+            <img id="battery" class="inspection-part" src="assets/Frame 15.png" alt="battery part of the headphones">
+            <img id="top-cushion" class="inspection-part" src="assets/Frame 22.png" alt="Top cushion part of the headphones">
+          </div>       
+        </section>
+
+        <section id="vote-scene" class="story-scene vote-scene" aria-label="Repair or replace vote">
+          <section class="vote-panel vote-screen">
+            <h2>When headphones stop working, what would you choose?</h2>
+            <div class="vote-actions">
+              <button class="vote-button" data-choice="repair">Repair</button>
+              <button class="vote-button" data-choice="replace">Replace</button>
+            </div>
+            <p id="vote-result">Choose the path you would take.</p>
+          </section>
+        </section>
+
+        <button id="step-back" class="step-back" type="button" hidden>Back</button>
+      </div>
+
+      <div class="story-controls" aria-label="Story controls">
+        <button id="start-story" aria-label="Start" title="Start">Start</button>
+        <button id="stop-story" aria-label="Pause" title="Pause">Pause</button>
+        <button id="restart-story" aria-label="Back" title="Back">Back</button>
+      </div>
+      <p id="stage-caption" class="stage-caption">Follow the routine. Watch for the break.</p>
+    </section>
+
+    <aside id="card" class="info-card" aria-live="polite">
+      <h2 id="card-title">Before Repair or Replace</h2>
+      <p id="card-fact">A broken headphone does not always mean the whole product has reached the end of its life. Start the story, then inspect the parts.</p>
+      <p id="card-source"></p>
+      <button id="ask-button" hidden>Ask AI</button>
+      <p id="model-output"></p>
+      <button id="show-repair-examples" class="primary-action" hidden>See repair examples</button>
+      <button id="go-to-vote" class="primary-action" hidden>Vote now</button>
+    </aside>
+  </main>
+
+  <footer>
+    <p>2026/10/14 Lyra</p>
+  </footer>
+
+  <script src="data/facts.js?v=20261015-7"></script>
+  <script src="script.js?v=20261015-7"></script>
+</body>
+</html>
+
+
+
+
+
+

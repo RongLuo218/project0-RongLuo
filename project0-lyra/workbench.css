@@ -1,0 +1,186 @@
+.lab-scene {
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.lab-left,
+.drop-zone {
+  min-height: 300px;
+  display: grid;
+  place-items: center;
+}
+
+.drag-headphones {
+  width: 170px;
+  image-rendering: pixelated;
+  cursor: grab;
+  touch-action: none;
+  filter: drop-shadow(0 0 0.45rem rgba(56, 219, 232, 0.7));
+}
+
+.drag-headphones.dragging {
+  position: fixed;
+  z-index: 20;
+  cursor: grabbing;
+  pointer-events: none;
+}
+
+.drop-zone {
+  color: var(--yellow);
+}
+
+.drop-zone img {
+  width: min(250px, 86%);
+  image-rendering: pixelated;
+}
+
+
+body.workbench-mode .story-panel {
+  padding: 0;
+}
+
+body.workbench-mode .story-panel::before,
+body.workbench-mode .story-panel::after,
+body.workbench-mode .story-stage::before,
+body.workbench-mode .story-stage::after {
+  display: none;
+}
+
+body.workbench-mode .drop-zone {
+  color: #172026;
+}
+
+body.workbench-mode {
+  overflow: auto;
+}
+
+body.workbench-mode .step-back {
+  color: #49606a;
+}
+
+body.workbench-mode .step-back:hover,
+body.workbench-mode .step-back:active {
+  color: #172026;
+}
+
+body.workbench-mode .story-panel,
+body.workbench-mode .story-stage {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+body.workbench-mode .story-stage {
+  height: min(66vh, 580px);
+  min-height: 430px;
+}
+
+body[data-scene="drag-lab"] .info-card {
+  display: none !important;
+}
+
+body[data-scene="drag-lab"].workbench-mode .experience {
+  width: min(1060px, 94vw);
+  grid-template-columns: 1fr;
+}
+
+body[data-scene="drag-lab"].workbench-mode .story-stage {
+  height: min(72vh, 650px);
+  min-height: 500px;
+}
+
+body.workbench-mode .bench-scene,
+body.workbench-mode .inspection-scene {
+  padding: 0;
+}
+
+@media (max-width: 700px) {
+  body.workbench-mode .story-stage {
+    min-height: 390px;
+  }
+}
+
+body.workbench-mode .lab-left,
+body.workbench-mode .drop-zone {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+body.workbench-mode .drop-zone.ready {
+  box-shadow: 0 0 0 3px rgba(255, 234, 58, 0.42), 0 0 24px rgba(255, 234, 58, 0.24);
+}
+
+
+body[data-scene="drag-lab"].workbench-mode .lab-scene {
+  grid-template-columns: minmax(260px, 0.95fr) minmax(260px, 1.05fr);
+  gap: 10px;
+  align-items: center;
+}
+
+body[data-scene="drag-lab"].workbench-mode .lab-left,
+body[data-scene="drag-lab"].workbench-mode .drop-zone {
+  min-height: clamp(360px, 54vh, 540px);
+  grid-template-rows: auto 1fr auto;
+  row-gap: 0.35rem;
+  align-items: center;
+  justify-items: center;
+  padding: clamp(1.25rem, 3vh, 2rem);
+}
+
+body[data-scene="drag-lab"].workbench-mode .lab-label,
+body[data-scene="drag-lab"].workbench-mode .drop-zone span {
+  grid-row: 1;
+}
+
+body[data-scene="drag-lab"].workbench-mode .drag-headphones,
+body[data-scene="drag-lab"].workbench-mode .drop-zone img {
+  grid-row: 2;
+}
+
+body[data-scene="drag-lab"].workbench-mode .drag-headphones {
+  width: clamp(285px, 27vw, 415px);
+}
+
+body[data-scene="drag-lab"].workbench-mode .drop-zone img {
+  width: clamp(300px, 29vw, 450px);
+}
+
+body[data-scene="bench"].workbench-mode .experience {
+  width: min(1260px, 94vw);
+  grid-template-columns: minmax(0, 780px) minmax(320px, 410px);
+}
+
+body[data-scene="bench"].workbench-mode .story-stage {
+  min-height: 560px;
+}
+
+body[data-scene="bench"].workbench-mode .bench-image {
+  width: min(900px, 96%);
+  max-height: 66vh;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 18px rgba(23, 32, 38, 0.18));
+}
+
+@media (max-width: 900px) {
+  body[data-scene="bench"].workbench-mode .experience {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  body[data-scene="drag-lab"].workbench-mode .lab-scene {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  body[data-scene="drag-lab"].workbench-mode .lab-left,
+  body[data-scene="drag-lab"].workbench-mode .drop-zone {
+    min-height: 280px;
+  }
+
+  body[data-scene="drag-lab"].workbench-mode .drag-headphones,
+  body[data-scene="drag-lab"].workbench-mode .drop-zone img {
+    width: min(220px, 44vw);
+  }
+}
